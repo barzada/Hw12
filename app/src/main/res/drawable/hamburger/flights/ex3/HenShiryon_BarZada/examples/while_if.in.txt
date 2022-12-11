@@ -1,0 +1,22 @@
+/* examples of assignment, while statement, if statement. 
+   This is for the original compiler: note that no variables
+   are declared here.  The updated compiler should 
+   issue error messages for undefined variables
+*/
+// int a, b, c, d, f, w, y ,z; // uncomment this to check the right output
+a  = (b+c)*(d+f);
+
+
+while (a < b+c)
+    a = a + y;
+
+
+if (w+z<b+c)
+     a = a+y;
+else
+     z = y;
+
+
+
+
+

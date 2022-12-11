@@ -1,0 +1,6 @@
+<departures>
+LY1 00:10a.m. "JFK"
+BA289 10:15p.m. "Heathrow" cargo
+AF1234 03:20p.m.        "Charles de Gaulle"
+OP78 05:37a.m. "Athens" freight
+AA17 11:00a.m. "LAX"

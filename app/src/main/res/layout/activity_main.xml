@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+        tools:context=".MainActivity"
+    android:background="#A8FFC107">
+
+    <LinearLayout
+        android:id="@+id/layout_hearts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:id="@+id/main_IMG_first_heart"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:paddingRight="10dp"
+            app:srcCompat="@drawable/heart_svgrepo_com" />
+        <ImageView
+            android:id="@+id/main_IMG_second_heart"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:paddingRight="10dp"
+            app:srcCompat="@drawable/heart_svgrepo_com" />
+        <ImageView
+            android:id="@+id/main_IMG_third_heart"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:paddingRight="10dp"
+
+            app:srcCompat="@drawable/heart_svgrepo_com" />
+
+
+
+    </LinearLayout>
+
+
+    <TableLayout
+        android:id="@+id/main_IMG_mat"
+        android:layout_width="match_parent"
+        android:layout_height="570dp"
+        android:layout_above="@+id/main_IMG_right"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="30dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            >
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                android:src="@drawable/hamburger" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                android:src="@drawable/hamburger" />
+
+
+            <ImageView
+
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                android:src="@drawable/hamburger" />
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            >
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                android:src="@drawable/hamburger" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                android:src="@drawable/hamburger" />
+
+
+            <ImageView
+
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                android:src="@drawable/hamburger" />
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            >
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                android:src="@drawable/hamburger" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                android:src="@drawable/hamburger" />
+
+
+            <ImageView
+
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                android:src="@drawable/hamburger" />
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            >
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                android:src="@drawable/hamburger" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                android:src="@drawable/hamburger" />
+
+
+            <ImageView
+
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                android:src="@drawable/hamburger" />
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            >
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                android:src="@drawable/hamburger" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                android:src="@drawable/hamburger" />
+
+
+            <ImageView
+
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                android:src="@drawable/hamburger" />
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            >
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                android:src="@drawable/hamburger" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                android:src="@drawable/hamburger" />
+
+
+            <ImageView
+
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                android:src="@drawable/hamburger" />
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="60dp"
+
+            >
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                android:src="@drawable/hamburger" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                android:src="@drawable/hamburger" />
+
+
+            <ImageView
+
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                android:src="@drawable/hamburger" />
+
+
+        </TableRow>
+
+    </TableLayout>
+
+
+    <LinearLayout
+        android:id="@+id/main_IMG_man"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:orientation="horizontal"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/main_IMG_right"
+
+        >
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="110dp"
+            android:src="@drawable/avatar"
+            android:layout_weight="1"
+            android:visibility="invisible"
+
+            />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="110dp"
+            android:src="@drawable/avatar"
+            android:layout_weight="1"
+            />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="110dp"
+            android:src="@drawable/avatar"
+            android:layout_weight="1"
+            android:visibility="invisible"
+            />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/main_IMG_right"
+        android:layout_width="100dp"
+        android:layout_height="83dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/right" />
+
+    <ImageView
+        android:id="@+id/main_IMG_left"
+        android:layout_width="100dp"
+        android:layout_height="83dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/left" />
+
+</RelativeLayout>

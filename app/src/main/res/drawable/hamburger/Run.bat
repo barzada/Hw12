@@ -1,0 +1,2 @@
+start /D "C:\Program Files\obs-studio\bin\64bit" obs64.exe --startrecording
+start /D "C:\Users\Bar\AppData\Roaming\Zoom\bin" Zoom.exe --url=https://us02web.zoom.us/j/89062886984?pwd=V3M2VnBmd1FIcnlqVUR1bFMwMW1HZz09

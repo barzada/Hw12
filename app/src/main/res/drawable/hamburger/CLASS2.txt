@@ -1,0 +1,164 @@
+#include <xc.h>
+#pragma config JTAGEN = OFF     
+#pragma config FWDTEN = OFF
+#pragma config FNOSC =	FRCPLL
+#pragma config FSOSCEN =	OFF
+#pragma config POSCMOD =	EC
+#pragma config OSCIOFNC =	ON
+#pragma config FPBDIV =     DIV_1
+#pragma config FPLLIDIV =	DIV_2
+#pragma config FPLLMUL =	MUL_20
+#pragma config FPLLODIV =	DIV_1
+
+void makeSound (){
+    int k=100,m=100;
+        while(PORTBbits.RB10==1)
+                {
+                    
+                    PORTBbits.RB14^=1;
+
+                    for(;k<100+m;k++);
+                    m+=100;
+                    if(m>32000)
+                    {
+                        m=100;
+                        k=10;
+                    }
+}
+    
+}
+void getSpeed (int* speed){
+     if(PORTDbits.RD14==1)
+                     *speed=128000;
+                 else 
+                     *speed=640000;
+     
+}
+void main()
+
+{
+    
+    int j;
+TRISFbits.TRISF3 = 1; // RF3 (SW0) configured as input
+TRISFbits.TRISF5 = 1; // RF5 (SW1) configured as input
+TRISFbits.TRISF4 = 1; // RF4 (SW2) configured as input
+TRISDbits.TRISD15 = 1; // RD15 (SW3) configured as input
+TRISDbits.TRISD14 = 1; // RD14 (SW4) configured as input
+TRISBbits.TRISB11 = 1; // RB11 (SW5) configured as input
+ANSELBbits.ANSB11 = 0; // RB11 (SW5) disabled analog
+TRISBbits.TRISB10 = 1; // RB10 (SW6) configured as input
+ANSELBbits.ANSB10 = 0; // RB10 (SW6) disabled analog
+TRISBbits.TRISB9 = 1; // RB9 (SW7) configured as input
+ANSELBbits.ANSB9 = 0; // RB9 (SW7) disabled analog
+TRISBbits.TRISB14 = 0;
+ANSELBbits.ANSB14 = 0;
+
+TRISA &= 0xff00;
+int speed=640000;
+int x=1;
+int r=8,l=16;
+PORTA=0;
+
+
+while(1)
+     {
+   
+    if(PORTBbits.RB9==1)
+    {
+        PORTA=0;
+        break;
+        
+    }
+     makeSound();
+     
+         if(PORTFbits.RF3 == 1){  
+             
+                 while(PORTBbits.RB11==1){
+                }
+                 getSpeed(&speed);
+                  if(PORTDbits.RD15==1)    
+                      PORTA--;
+                  else
+                      PORTA ++;
+                for(j=0;j<speed;j++);
+         
+}
+
+    
+         else if (PORTFbits.RF5 == 1){
+               while(PORTBbits.RB11==1){
+                }
+                getSpeed(&speed);
+                if(PORTDbits.RD15==1){
+                    if(x<1){
+                  x=128;
+                 PORTA=x;
+                 for(j=0;j<speed;j++);
+               }
+              else
+              {
+                x=x>>1;
+                PORTA=x;
+                for(j=0;j<speed;j++);
+              }
+                }
+                else{
+                    
+              if(x>128){
+                  x=1;
+                 PORTA=x;
+                 for(j=0;j<speed;j++);
+               }
+              else
+              {
+                x=x<<1;
+                PORTA=x;
+                for(j=0;j<speed;j++);
+              }
+              
+         }
+         }
+         
+        else if (PORTFbits.RF4 == 1){
+            PORTA=l+r;
+              while(PORTBbits.RB11==1){
+                }
+               getSpeed(&speed);
+               
+             if(PORTDbits.RD15==0){
+                if(r<=1 && l>=128){
+                l =16;
+                r =8;
+              
+               PORTA = l + r;
+                for(j=0;j<speed;j++);
+                }
+                else{
+                    PORTA = 0;
+                    l = l<<1;
+                    r=r>>1;
+                    PORTA = l + r;
+                     for(j=0;j<speed;j++);
+                }
+
+            }
+               else{
+                  if(r>=8 && l<=16){
+                    l =128;
+                    r =1;
+
+                   PORTA = l + r;
+                    for(j=0;j<speed;j++);
+                    } 
+                  else{   
+                      l = l>>1;
+                      r = r<<1;
+                      PORTA = l + r;
+                      for(j=0;j<speed;j++);
+                  }
+                    }
+                
+        }
+         
+     }     
+}
